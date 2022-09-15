@@ -1,11 +1,12 @@
 import React from 'react';
-import styles from './btn.module.scss'
-
+import {useTheme} from "./ theme/useTheme";
 
 const App = () => {
+    const {theme, toggleThem} = useTheme()
     return (
-        <div className={styles.body}>
-            aboba
+        <div className={`app ${theme}`}>
+        TExt
+            <button onClick={toggleThem}>Theme</button>
         </div>
     );
 };

@@ -10,7 +10,6 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
         exclude: /node_modules/,
     }
 
-
     const cssLoader = {
         test: /\.s[ac]ss$/i,
         use: [
@@ -27,7 +26,6 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
             "sass-loader",
         ],
     }
-
 
     return [
         typeScriptLoader,
