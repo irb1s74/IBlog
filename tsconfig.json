@@ -13,7 +13,11 @@
     "allowJs": true,
     //моды импортов
     "moduleResolution": "node",
-    //    "baseUrl": ".",
+    //for absolute imports
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    },
     //для работы с пакетами которые используют common js(require/ module.exports)
     "esModuleInterop": true,
     // import * as React from 'react'

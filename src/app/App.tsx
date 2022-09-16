@@ -1,6 +1,5 @@
-import React from 'react';
-import {useTheme} from "./ theme/useTheme";
-import {classNames} from "./helpers/classNames";
+import {useTheme} from "./providers/ThemeProvider";
+import './styles/index.scss'
 
 const App = () => {
     const {theme, toggleThem} = useTheme()
