@@ -1,6 +1,19 @@
 .Link {
   color: var(--secondary-color);
 
+  &:hover:after {
+    width: 100%;
+  }
+
+  &::after {
+    content: '';
+    width: 0;
+    height: 1px;
+    display: block;
+    background-color: var(--secondary-color);
+    transition: 0.3s ease-out;
+  }
+
   &:not(:last-child) {
     margin-right: 40px;
   }
