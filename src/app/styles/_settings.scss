@@ -10,6 +10,7 @@ html {
 
 * {
   outline: none;
+  transition: color, background-color .2s;
 }
 
 .page {
@@ -99,6 +100,11 @@ a {
 
 .flex {
   display: flex;
+  width: 100%;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {

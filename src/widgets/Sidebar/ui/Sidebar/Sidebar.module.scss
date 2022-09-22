@@ -1,0 +1,18 @@
+.Sidebar {
+  --sidebar-width: 300px;
+  --sidebar-width-collapsed: 100px;
+  --sidebar-bg-color: #DCDDD8;
+  --sidebar-color: #6F6F6D;
+  --sidebar-color-active: #020101;
+
+  height: 100vh;
+  width: var(--sidebar-width);
+  background-color: var(--sidebar-bg-color);
+
+  transition: width .2s ease-in-out;
+}
+
+.collapsed {
+  width: var(--sidebar-width-collapsed);
+}
+
