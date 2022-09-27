@@ -1,5 +1,5 @@
 import { ChangeEvent, FC } from 'react';
-import { classNames } from 'shared/lib/classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 import sunSvg from 'shared/assets/icons/sun.svg';
 import styles from './Switch.module.scss';
 
