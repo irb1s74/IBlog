@@ -1,55 +1,51 @@
 .Switch {
-  --switch-height: 24px;
-  --switch-width: 55px;
-  --switch-bg-color: #CCC;
-  --cyrcle-height: 20px;
-  --cyrcle-width: 20px;
+    --switch-height: 24px;
+    --switch-width: 55px;
+    --switch-bg-color: #ccc;
+    --cyrcle-height: 20px;
+    --cyrcle-width: 20px;
 }
 
 .label {
-  position: relative;
-  display: inline-block;
-  width: var(--switch-width);
-  height: var(--switch-height)
+    position: relative;
+    display: inline-block;
+    width: var(--switch-width);
+    height: var(--switch-height);
 }
 
 .checkbox {
-  display: none;
-  visibility: hidden;
+    display: none;
+    visibility: hidden;
 
-  &:checked ~ .slider::before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
+    &:checked ~ .slider::before {
+        transform: translateX(26px);
+    }
 
-  &:checked ~ .slider {
-    background-color: var(--primary-color);
-  }
+    &:checked ~ .slider {
+        background-color: var(--primary-color);
+    }
 }
 
 .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 34px;
-  background-color: var(--switch-bg-color);
-  -webkit-transition: .4s;
-  transition: .4s;
-
-  &:before {
     position: absolute;
-    content: "";
-    height: var(--cyrcle-height);
-    width: var(--cyrcle-width);
-    left: 4px;
-    bottom: 2px;
-    border-radius: 50%;
-    background-color: #FFF;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+    background-color: var(--switch-bg-color);
+    transition: 0.4s;
+
+    &::before {
+        position: absolute;
+        content: "";
+        height: var(--cyrcle-height);
+        width: var(--cyrcle-width);
+        left: 4px;
+        bottom: 2px;
+        border-radius: 50%;
+        background-color: #fff;
+        transition: 0.4s;
+    }
 }
