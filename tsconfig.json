@@ -41,8 +41,9 @@
     }
   },
   "include": [
-    "./src/app/types/global.d.ts",
-    "./config/jest/jest-setup.ts"
+    "./config/jest/jest-setup.ts",
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
   ]
 }
 

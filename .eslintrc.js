@@ -8,7 +8,14 @@ module.exports = {
         'plugin:react/recommended',
         'plugin:i18next/recommended',
     ],
-    overrides: [],
+    overrides: [
+        {
+            files: "**/src/**/*.test.{ts,tsx}",
+            rules: {
+                'i18next/no-literal-string': 'off'
+            }
+        }
+    ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -28,7 +35,7 @@ module.exports = {
         indent: [2, 4],
         'react/jsx-filename-extension': [
             2,
-            { extensions: ['.js', '.jsx', '.tsx'] },
+            {extensions: ['.js', '.jsx', '.tsx']},
         ],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
@@ -41,8 +48,8 @@ module.exports = {
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
-        'i18next/no-literal-string': ['warn', { markupOnly: true }],
-        'max-len': ['off', { ignoreComments: true }],
+        'i18next/no-literal-string': ['error', {markupOnly: true, ignoreAttribute: ["to", "data-testid"]}],
+        'max-len': ['off', {ignoreComments: true}],
     },
     globals: {
         __IS_DEV__: true,
