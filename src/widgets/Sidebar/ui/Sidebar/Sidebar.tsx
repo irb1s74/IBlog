@@ -23,8 +23,8 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
     };
 
     return (
-        <div className={classNames(styles.Sidebar, { [styles.collapsed]: collapsed }, [className])}>
-            <button type="button" onClick={handleSetCollapsed}>{t('Переключать')}</button>
+        <div data-testid='sidebar' className={classNames(styles.Sidebar, { [styles.collapsed]: collapsed }, [className])}>
+            <button data-testid='sidebar-btn-toggle' type="button" onClick={handleSetCollapsed}>{t('Переключать')}</button>
             <button type="button" onClick={handleChangeLanguage}>{t('Переключать')}</button>
             <Switch checked={theme === ETheme.DARK} onChange={toggleThem} />
         </div>
