@@ -2,15 +2,29 @@ import {FC, ReactNode} from 'react';
 import {classNames} from 'shared/lib/classNames/classNames';
 import styles from './Button.module.scss'
 
-interface ButtonProps {
-    className?: string;
-    children: ReactNode
+
+export enum ButtonVariants {
+    contained = "contained",
+    outlined = "outlined",
+    text = "text",
 }
 
-export const Button: FC<ButtonProps> = ({className, children}) => {
+interface ButtonProps {
+    className?: string;
+    children: ReactNode,
+    onClick?: () => void,
+    variant?: string
+}
+
+export const Button: FC<ButtonProps> = ({className, children, onClick, variant = ButtonVariants.contained}) => {
     return (
-        <div className={classNames(styles.Button, {}, [className])}>
+        <button type='button' onClick={onClick}
+            className={classNames(styles.Button, {
+                [styles.Button__contained]: variant === ButtonVariants.contained,
+                [styles.Button__outlined]: variant === ButtonVariants.outlined,
+                [styles.Button__text]: variant === ButtonVariants.text
+            }, [className])}>
             {children}
-        </div>
+        </button>
     );
 };

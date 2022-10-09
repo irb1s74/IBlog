@@ -4,5 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--secondary-color);
+    flex-direction: column;
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
 }

@@ -3,7 +3,7 @@ import {Button} from "./Button";
 
 describe('Button', () => {
     test('render', () => {
-        render(<Button>baobab</Button>);
+        render(<Button >baobab</Button>);
         expect(screen.getByText('baobab')).toBeInTheDocument();
     });
 });
