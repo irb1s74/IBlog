@@ -23,4 +23,4 @@ export const Light = Template.bind({})
 Light.decorators = [ThemeDecorator(ETheme.LIGHT)]
 
 export const Dark = Template.bind({})
-Light.decorators = [ThemeDecorator(ETheme.DARK)]
+Dark.decorators = [ThemeDecorator(ETheme.DARK)]

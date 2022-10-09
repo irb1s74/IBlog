@@ -15,4 +15,5 @@ const About: FC<AboutProps> = ({className}) => {
         </div>
     )
 };
+
 export default About;
