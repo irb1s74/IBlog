@@ -13,12 +13,14 @@ interface ButtonProps {
     className?: string;
     children: ReactNode,
     onClick?: () => void,
+    testId?: string,
     variant?: string
 }
 
-export const Button: FC<ButtonProps> = ({className, children, onClick, variant = ButtonVariants.contained}) => {
+export const Button: FC<ButtonProps> = ({className, children, onClick, testId, variant = ButtonVariants.contained}) => {
     return (
         <button type='button' onClick={onClick}
+            data-testid={testId}
             className={classNames(styles.Button, {
                 [styles.Button__contained]: variant === ButtonVariants.contained,
                 [styles.Button__outlined]: variant === ButtonVariants.outlined,
