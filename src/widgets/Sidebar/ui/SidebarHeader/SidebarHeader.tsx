@@ -1,4 +1,4 @@
-import {FC} from "react";
+import {FC, memo} from "react";
 import {Button} from "shared/ui/Button/Button";
 import {useTranslation} from "react-i18next";
 import SidebarBtn from "../SidebarBtn/SidebarBtn";
@@ -10,18 +10,15 @@ interface SidebarHeaderProps {
 }
 
 const SidebarHeader: FC<SidebarHeaderProps> = ({handleSetCollapsed, collapsed}) => {
-    const {t, i18n} = useTranslation();
-    const handleChangeLanguage = () => {
-        i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
-    };
+    const {t} = useTranslation();
+
     return (
         <div className={styles.Sidebar__header}>
             <div className={styles.logo}>
                 {t('IBlog')}
             </div>
-            <Button onClick={handleChangeLanguage}>{t('Переключать')}</Button>
             <SidebarBtn handleSetCollapsed={handleSetCollapsed} collapsed={collapsed}/>
         </div>
     );
 };
-export default SidebarHeader
+export default memo(SidebarHeader);
