@@ -13,9 +13,7 @@ export const Navbar: FC<NavbarProps> = ({ className }) => {
     return (
         <div className={classNames(styles.Navbar, {}, [className])}>
             <div className={styles.content}>
-                <div className={styles.logo}>
-                    {t('IBlog')}
-                </div>
+                <div className={styles.title}>{t('Домой')}</div>
                 <div className={styles.actions}>
                     <div className={styles.links}>
                         <Link to="/">{t('Домой')}</Link>

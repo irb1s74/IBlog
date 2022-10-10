@@ -1,0 +1,60 @@
+.Sidebar {
+    --sidebar-width: 300px;
+    --sidebar-width-collapsed: 100px;
+    --sidebar-bg-color: #dcddd8;
+    --sidebar-color: #6f6f6d;
+    --sidebar-color-active: #020101;
+
+    height: 100vh;
+    width: var(--sidebar-width);
+    background-color: var(--sidebar-bg-color);
+    transition: width 0.2s ease-in-out;
+    padding: 15px 20px;
+
+    .collapseBtn {
+        cursor: pointer;
+        position: absolute;
+        border: 2px solid var(--bg-color);
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        right: -40px;
+        top: 20px;
+        color: var(--bg-color);
+        background-color: var(--sidebar-bg-color);
+    }
+
+    &__header {
+        position: relative;
+
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1c1c1eff;
+        }
+    }
+
+    &__main {
+        .list {
+
+        }
+
+        .listItem {
+            .icon {
+
+            }
+
+            .text {
+
+            }
+        }
+    }
+
+    &__footer {
+
+    }
+}
+
+.collapsed {
+    width: var(--sidebar-width-collapsed);
+}
