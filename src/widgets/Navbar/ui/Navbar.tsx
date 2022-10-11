@@ -15,10 +15,7 @@ export const Navbar: FC<NavbarProps> = ({ className }) => {
             <div className={styles.content}>
                 <div className={styles.title}>{t('Домой')}</div>
                 <div className={styles.actions}>
-                    <div className={styles.links}>
-                        <Link to="/">{t('Домой')}</Link>
-                        <Link to="/about">{t('Информация')}</Link>
-                    </div>
+
                 </div>
             </div>
         </div>

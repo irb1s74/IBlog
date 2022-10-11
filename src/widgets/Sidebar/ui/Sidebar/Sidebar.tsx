@@ -20,7 +20,7 @@ export const Sidebar: FC<SidebarProps> = ({className}) => {
     return (
         <div data-testid='sidebar' className={classNames(styles.Sidebar, {[styles.collapsed]: collapsed}, [className])}>
             <SidebarHeader collapsed={collapsed} handleSetCollapsed={handleSetCollapsed}/>
-            <SidebarMain collapsed={collapsed}/>
+            <SidebarMain/>
             <SidebarFooter/>
         </div>
     );

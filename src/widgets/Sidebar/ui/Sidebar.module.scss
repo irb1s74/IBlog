@@ -3,6 +3,7 @@
     --sidebar-width-collapsed: 100px;
     --sidebar-bg-color: #dcddd8;
     --sidebar-color: #6f6f6d;
+    --sidebar-hover-color: rgb(2 1 1 / 5%);
     --sidebar-color-active: #020101;
 
     height: 100vh;
@@ -14,6 +15,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 
     .collapseBtn {
         cursor: pointer;
@@ -22,14 +24,13 @@
         display: flex;
         align-items: center;
         padding: 10px;
-        right: -40px;
-        top: 40px;
+        right: -30px;
+        top: 6px;
         color: var(--bg-color);
         background-color: var(--sidebar-bg-color);
     }
 
     &__header {
-        position: relative;
         width: 100%;
 
         .logo {
@@ -40,7 +41,6 @@
     }
 
     &__main {
-        color: var(--sidebar-color);
         width: 100%;
         flex-grow: 0.5;
 
@@ -51,6 +51,7 @@
         }
 
         .listItem {
+            color: var(--sidebar-color);
             display: flex;
             align-items: center;
             justify-content: flex-start;
@@ -69,6 +70,10 @@
                 margin-left: 20px;
             }
 
+            &:hover {
+                background-color: var(--sidebar-hover-color);
+            }
+
             &:last-child {
                 margin-bottom: 0;
             }
@@ -77,6 +82,10 @@
         .active {
             background-color: var(--primary-color);
             color: #1c1c1e;
+
+            &:hover {
+                background-color: var(--primary-color);
+            }
         }
     }
 
