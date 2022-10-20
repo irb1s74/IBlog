@@ -14,7 +14,6 @@ export const Modal: FC<ModalProps> = ({className, children, isOpen, onClose}) =>
         [styles.opened]: isOpen
     }
 
-    console.log(isOpen)
     const onContentClick = (event: React.MouseEvent) => {
         event.stopPropagation()
     }

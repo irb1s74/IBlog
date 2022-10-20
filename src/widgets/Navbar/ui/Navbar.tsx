@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Link } from 'shared/ui/Link/Link';
 import { useTranslation } from 'react-i18next';
 import styles from './Navbar.module.scss';
 
@@ -15,7 +14,6 @@ export const Navbar: FC<NavbarProps> = ({ className }) => {
             <div className={styles.content}>
                 <div className={styles.title}>{t('Домой')}</div>
                 <div className={styles.actions}>
-
                 </div>
             </div>
         </div>

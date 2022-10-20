@@ -3,6 +3,7 @@ import {classNames} from 'shared/lib/classNames/classNames';
 import {BugButton} from 'app/providers/ErrorBoundary';
 import {useTranslation} from 'react-i18next';
 import styles from './Main.module.scss';
+import Counter from "../../../entities/Counter/ui/Counter";
 
 interface MainProps {
     className?: string
