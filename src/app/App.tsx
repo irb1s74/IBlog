@@ -10,16 +10,10 @@ import './styles/index.scss';
 
 function App() {
     const {theme} = useTheme();
-    const [isOpen, setOpen] = useState(false)
-    const onClose = () => {
-        setOpen(false)
-    }
 
     return (
         <div className={classNames('app', {}, [theme])}>
             <Suspense fallback="">
-                <Button onClick={() => setOpen(true)}>+</Button>
-                <Modal isOpen={isOpen} onClose={onClose}/>
                 <div className="flex">
                     <Sidebar/>
                     <div className="flex-grow">

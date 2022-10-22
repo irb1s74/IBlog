@@ -1,0 +1,15 @@
+.LoginForm {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .content {
+        height: 100%;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}

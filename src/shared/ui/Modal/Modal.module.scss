@@ -20,11 +20,12 @@
 
     .content {
         padding: 10px;
-        min-width: 460px;
-        min-height: 320px;
+        max-width: 460px;
+        max-height: 320px;
+        height: 100%;
+        width: 100%;
         border-radius: 5px;
         background-color: var(--bg-elements);
-        color: #1c1c1eff;
     }
 }
 

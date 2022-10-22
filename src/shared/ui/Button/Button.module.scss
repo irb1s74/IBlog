@@ -4,14 +4,14 @@
     border-radius: 0;
     border: none;
     cursor: pointer;
+    color: var(--secondary-color);
 
     &__contained {
-        background-color: var(--secondary-color);
-        color: var(--bg-color);
+        background-color: var(--bg-color);
     }
 
     &__outlined {
-        border: 1.5px solid var(--secondary-color);
+        border: 1.5px solid var(--bg-color);
         background-color: initial;
         padding: 8.5px 13.5px;
     }

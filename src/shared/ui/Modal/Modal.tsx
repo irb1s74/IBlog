@@ -18,6 +18,10 @@ export const Modal: FC<ModalProps> = ({className, children, isOpen, onClose}) =>
         event.stopPropagation()
     }
 
+    if(!isOpen){
+        return  null
+    }
+
     return (
         <div className={classNames(styles.Modal, mods, [className])}>
             <div className={styles.overlay} onClick={onClose}>
