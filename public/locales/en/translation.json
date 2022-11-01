@@ -1,12 +1,17 @@
 {
-  "Переключать": "toggle",
   "IBlog": "IBlog",
-  "Домой": "Home",
-  "Информация": "About",
-  "Страница не найдена": "Страница не найдена",
-  "Произошла ошибка": "Произошла ошибка",
-  "Throw error": "Throw error",
   "Main": "Main",
+  "Throw error": "Throw error",
   "about": "about",
-  "Войти": "Войти"
+  "Авторизация": "Authorization",
+  "Войти": "Log in",
+  "Домой": "Home",
+  "Информация": "Information",
+  "Обновить страницу": "",
+  "Открыть модал": "Открыть модал",
+  "Переключать": "toggle",
+  "Произошла ошибка": "An error has occurred",
+  "Страница не найдена": "Page not found",
+  "Вы ввели неверный логин или пароль": "You entered an incorrect username or password",
+  "Выйти": "Logout"
 }

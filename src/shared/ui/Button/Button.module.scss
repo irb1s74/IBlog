@@ -4,19 +4,26 @@
     border-radius: 0;
     border: none;
     cursor: pointer;
-    color: var(--secondary-color);
+}
 
-    &__contained {
-        background-color: var(--bg-color);
-    }
+.contained {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+}
 
-    &__outlined {
-        border: 1.5px solid var(--bg-color);
-        background-color: initial;
-        padding: 8.5px 13.5px;
-    }
+.outlined {
+    border: 2px solid #1c1c1eff;
+    color: #1c1c1eff;
+    background-color: initial;
+    padding: 8.5px 13.5px;
+}
 
-    &__text {
-        background-color: initial;
-    }
+.text {
+    background-color: initial;
+    color: #1c1c1eff;
+}
+
+.disabled {
+    cursor: initial;
+    opacity: 0.5;
 }

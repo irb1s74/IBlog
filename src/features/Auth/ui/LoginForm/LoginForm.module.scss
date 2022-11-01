@@ -3,8 +3,19 @@
     flex-direction: column;
     height: 100%;
 
+    .title {
+        width: 100%;
+        font-size: 28px;
+        margin-bottom: 32px;
+        color: #1c1c1eff;
+    }
+
     .content {
         height: 100%;
+    }
+
+    .content * {
+        margin-bottom: 20px;
     }
 
     .footer {

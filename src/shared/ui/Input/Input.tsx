@@ -24,10 +24,10 @@ export const Input = memo((props: InputProps) => {
     const onChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
         onChange?.(event.target.value);
     }
+
     return (
-        <label htmlFor="input" className={styles.Label}>
+        <label className={styles.Label}>
             <input
-                id='input'
                 className={classNames(styles.Input, {}, [className])}
                 placeholder="&nbsp;"
                 type={type}

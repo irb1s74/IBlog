@@ -1,6 +1,6 @@
 import React from 'react';
 import {ComponentStory, ComponentMeta} from '@storybook/react';
-import {Button, ButtonVariants} from './Button';
+import {Button} from './Button';
 
 
 export default {
@@ -17,17 +17,24 @@ export const Contained = Template.bind({})
 
 Contained.args = {
     children: 'Text',
-    variant: ButtonVariants.contained
+    variant: "contained"
 }
 
 export const Text = Template.bind({})
 Text.args = {
     children: 'Text',
-    variant: ButtonVariants.text
+    variant: "text"
 }
 
 export const Outlined = Template.bind({})
 Outlined.args = {
     children: 'Text',
-    variant: ButtonVariants.outlined
+    variant: "outlined"
+}
+
+export const Disabled = Template.bind({})
+Disabled.args = {
+    children: 'Text',
+    variant: "contained",
+    disabled: true,
 }

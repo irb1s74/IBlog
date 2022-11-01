@@ -1,15 +1,20 @@
-import {Suspense, useState} from 'react';
+import {Suspense, useEffect} from 'react';
 import {classNames} from 'shared/lib/classNames/classNames';
 import {Sidebar} from 'widgets/Sidebar';
 import {Navbar} from 'widgets/Navbar';
 import {AppRouter} from 'app/providers/router';
 import {useTheme} from './providers/ThemeProvider';
-import {Button} from "shared/ui/Button/Button";
-import {Modal} from "shared/ui/Modal/Modal";
-import './styles/index.scss';
+import 'app/styles/index.scss';
+import {useDispatch} from "react-redux";
+import {userActions} from "entities/User";
 
 function App() {
     const {theme} = useTheme();
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(userActions.initialAuthData())
+    }, [dispatch])
 
     return (
         <div className={classNames('app', {}, [theme])}>

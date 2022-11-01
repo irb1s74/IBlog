@@ -1,5 +1,6 @@
 import React, {FC, ReactNode} from 'react';
 import {classNames} from 'shared/lib/classNames/classNames';
+import {Portal} from "shared/ui/Portal/Portal";
 import styles from './Modal.module.scss'
 
 interface ModalProps {
@@ -18,17 +19,19 @@ export const Modal: FC<ModalProps> = ({className, children, isOpen, onClose}) =>
         event.stopPropagation()
     }
 
-    if(!isOpen){
-        return  null
+    if (!isOpen) {
+        return null
     }
 
     return (
-        <div className={classNames(styles.Modal, mods, [className])}>
-            <div className={styles.overlay} onClick={onClose}>
-                <div className={styles.content} onClick={onContentClick}>
-                    {children}
+        <Portal>
+            <div className={classNames(styles.Modal, mods, [className])}>
+                <div className={styles.overlay} onClick={onClose}>
+                    <div className={styles.content} onClick={onContentClick}>
+                        {children}
+                    </div>
                 </div>
             </div>
-        </div>
+        </Portal>
     );
 };
