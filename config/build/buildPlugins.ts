@@ -19,6 +19,9 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
             __IS_DEV__: isDev,
         }),
     ];
+
+
+
     if (isDev) {
         plugins.push(new ReactRefreshPlugin());
         plugins.push(new webpack.HotModuleReplacementPlugin());

@@ -1,26 +1,34 @@
 .Loader {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    position: relative;
-    animation: rotate 1s linear infinite;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 
-.Loader::before,
-.Loader::after {
-    content: "";
-    box-sizing: border-box;
-    position: absolute;
-    inset: 0;
-    border-radius: 50%;
-    border: 5px solid var(--secondary-color);
-    animation: clip-fix 2s linear infinite;
-}
+    span {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        position: relative;
+        animation: rotate 1s linear infinite;
+    }
 
-.Loader::after {
-    border-color: var(--primary-color);
-    animation: clip-fix 2s linear infinite, rotate 0.5s linear infinite reverse;
-    inset: 6px;
+    span::before,
+    span::after {
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        border: 5px solid var(--secondary-color);
+        animation: clip-fix 2s linear infinite;
+    }
+
+    span::after {
+        border-color: var(--primary-color);
+        animation: clip-fix 2s linear infinite, rotate 0.5s linear infinite reverse;
+        inset: 6px;
+    }
 }
 
 @keyframes rotate {

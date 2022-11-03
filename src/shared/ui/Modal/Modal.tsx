@@ -26,8 +26,8 @@ export const Modal: FC<ModalProps> = ({className, children, isOpen, onClose}) =>
     return (
         <Portal>
             <div className={classNames(styles.Modal, mods, [className])}>
-                <div className={styles.overlay} onClick={onClose}>
-                    <div className={styles.content} onClick={onContentClick}>
+                <div className={styles.overlay} onMouseUp={onClose}>
+                    <div onMouseUp={onContentClick}>
                         {children}
                     </div>
                 </div>
